@@ -2,7 +2,7 @@
 
 *Descripción:* El siguiente repositorio será usado para trabajar y desarrollar el curso de Microcontroladores 1, aquí se subiran las practicas y archivos solicitados por el docente. 
 
-*Curso:* Micro controladore  s I
+*Curso:* Micro controladadreres I
 
 *Autor:* Laboriano Hernández Jose Cristian
 
