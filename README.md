@@ -18,6 +18,7 @@ Practicas: Retardos_tarea
            P1-Corrimiento_Leds
            P2-Pantalla_7SEG
            P3-Contador_7SEG_7447
+           P2-PARCIAL2
 
 UNIVERSIDAD NACIONAL DE PIURA, PERÚ
 
