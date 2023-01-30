@@ -121,13 +121,13 @@ ${DISTDIR}/P2-PARCIAL2.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproje
 	@${MKDIR} ${DISTDIR} 
 	${MP_LD} -mcpu=PIC18F57Q84 ${OBJECTFILES_QUOTED_IF_SPACED} \
 	-o ${DISTDIR}/P2-PARCIAL2.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX} \
-	 -D__DEBUG=1  -misa=std -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -mcallgraph=std -Wl,-Map=${FINAL_IMAGE_NAME_MINUS_EXTENSION}.map -mno-download-hex
+	 -D__DEBUG=1  -misa=std -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -Wl,-presetVect=0h,-pISRVecthighPriority=08h,-pISRVectLowPriority=18h -mcallgraph=std -Wl,-Map=${FINAL_IMAGE_NAME_MINUS_EXTENSION}.map -mno-download-hex
 else
 ${DISTDIR}/P2-PARCIAL2.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
 	@${MKDIR} ${DISTDIR} 
 	${MP_LD} -mcpu=PIC18F57Q84 ${OBJECTFILES_QUOTED_IF_SPACED} \
 	-o ${DISTDIR}/P2-PARCIAL2.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX} \
-	 -misa=std -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -mcallgraph=std -Wl,-Map=${FINAL_IMAGE_NAME_MINUS_EXTENSION}.map -mno-download-hex
+	 -misa=std -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -Wl,-presetVect=0h,-pISRVecthighPriority=08h,-pISRVectLowPriority=18h -mcallgraph=std -Wl,-Map=${FINAL_IMAGE_NAME_MINUS_EXTENSION}.map -mno-download-hex
 endif
 
 

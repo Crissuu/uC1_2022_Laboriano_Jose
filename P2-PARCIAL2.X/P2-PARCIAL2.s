@@ -255,11 +255,51 @@ Int_Loop1:
     
 RES_SEC:
     BCF	PIR10,0,0
+SECUENCIA_RES:   
+    MOVLW   1
+    MOVWF   counter1,0	; carga del contador con el numero de repeticiones-->5
+N_OFFSET_RES:
+    MOVLW   0x0A	
+    MOVWF   counter,0	; carga del contador con el numero de offsets-->10
+    MOVLW   0x00	
+    MOVWF   offset,0	; definimos el valor del offset inicial-->0
+    GOTO    Loop_RES
+Table1:
+    ADDWF   PCL,1,0
+    RETLW   10000001B	; offset: 0 -> LEDS 0 y 7 ON
+    RETLW   01000010B	; offset: 1 -> LEDS 1 Y 6 ON
+    RETLW   00100100B	; offset: 2 -> LEDS 2 Y 5 ON
+    RETLW   00011000B	; offset: 3 -> LEDS 3 Y 4 ON
+    RETLW   00000000B	; offset: 4 -> LEDS <0,7> OFF
+    RETLW   00011000B	; offset: 5 -> LEDS 3 Y 4 ON
+    RETLW   00100100B	; offset: 6 -> LEDS 2 Y 5 ON
+    RETLW   01000010B	; offset: 7 -> LEDS 1 Y 6 ON
+    RETLW   10000001B	; offset: 8 -> LEDS 0 Y 7 ON
+    RETLW   00000000B	; offset: 9 -> LEDS <0,7> OFF
+Loop_RES:
+    BSF	    LATF,3,0	    ;LED PLACA OFF
+    BANKSEL PCLATU
+    MOVLW   low highword(Table1) 
+    MOVWF   PCLATU,1	    ;cargas el menor byte del word mas significativo a pclatu
+    MOVLW   high(Table1)
+    MOVWF   PCLATH,1	    ;cargas el mayor byte del word menos significativo a pclath
+    RLNCF   offset,0,0	    ;rotacion a la izquierda en el registro f y lo fuardas en w
+    CALL    Table1
+    MOVWF   LATC,0	    ;mueves w al registro latc
+    CALL    Delay_250ms,1
+    DECFSZ  counter,1,0	    ;decrementa 1 el counter y salta si es 0
+    GOTO    Next_Seq_RES
+    DECFSZ  counter1,1,0    ;decrementa en 1 el counter1 y salta si es 0
+    GOTO    N_OFFSET_RES
+    GOTO END_RES
+    
+Next_Seq_RES:
+    INCF    offset,1,0	    ;incrementra en 1 el offset
+    GOTO    Loop_RES
+END_RES:
+    BCF	PIR10,0,0
     
 END resetVect
-
-
-
 
 
 

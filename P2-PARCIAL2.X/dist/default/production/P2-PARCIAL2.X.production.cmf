@@ -12,11 +12,11 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $build/default/production/P2-PARCIAL2.o
-ISRVectLowPriority CODE 0 1FFEC 1FFEC 14 1 2
-CODE - 0 0 0 150 1 1
-resetVect CODE 0 1FFD8 1FFD8 4 1 2
+ISRVectLowPriority CODE 0 18 18 14 1 2
+CODE - 0 2C 2C 1A6 1 1
+resetVect CODE 0 0 0 4 1 2
 udata_acs COMRAM 1 500 500 6 1 1
-ISRVecthighPriority CODE 0 1FFDC 1FFDC 10 1 2
+ISRVecthighPriority CODE 0 8 8 10 1 2
 config CONFIG 4 300000 300000 23 1 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -25,17 +25,20 @@ config CONFIG 4 300000 300000 23 1 1
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
 RAM 560-36FF 1
-SFR 150-4FF 1
+SFR 4-7 1
+SFR 1D2-4FF 1
 SFR 3700-3FFF 1
 BANK5 560-5FF 1
 BANK6 600-6FF 1
 BANK7 700-7FF 1
 BANK8 800-8FF 1
 BANK9 900-9FF 1
-CONST 150-1FFD7 1
+CONST 4-7 1
+CONST 1D2-1FFFF 1
 IDLOC 200000-20003F 1
-SMALLCONST 4000-1FFD7 1
-CODE 150-1FFD7 1
+SMALLCONST 4000-1FFFF 1
+CODE 4-7 1
+CODE 1D2-1FFFF 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
 BANK12 C00-CFF 1
@@ -82,13 +85,14 @@ BANK52 3400-34FF 1
 BANK53 3500-35FF 1
 BANK54 3600-36FF 1
 BIGRAM 500-36FF 1
-BIGSFR 150-4FF 1
+BIGSFR 4-7 1
+BIGSFR 1D2-4FF 1
 BIGSFR 3700-3FFF 1
 COMRAM 506-55F 1
 CONFIG 300023-300023 1
 EEDATA 380000-3803FF 1
 MEDIUMCONST 4000-FFFF 1
-MEDIUMCONST 14000-1FFD7 1
+MEDIUMCONST 14000-1FFFF 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -103,162 +107,198 @@ MEDIUMCONST 14000-1FFD7 1
 # All other numeric values are in decimal.
 %LINETAB
 $build/default/production/P2-PARCIAL2.o
-1FFDC ISRVecthighPriority CODE >59:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-1FFDE ISRVecthighPriority CODE >60:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-1FFE2 ISRVecthighPriority CODE >61:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-1FFE6 ISRVecthighPriority CODE >63:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-1FFE8 ISRVecthighPriority CODE >64:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-1FFEA ISRVecthighPriority CODE >65:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-1FFEC ISRVectLowPriority CODE >44:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-1FFEE ISRVectLowPriority CODE >45:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-1FFF2 ISRVectLowPriority CODE >47:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-1FFF4 ISRVectLowPriority CODE >48:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-1FFF8 ISRVectLowPriority CODE >50:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-1FFFA ISRVectLowPriority CODE >51:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-1FFFC ISRVectLowPriority CODE >53:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-1FFFE ISRVectLowPriority CODE >54:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-0 CODE ABS >28:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-4 CODE ABS >29:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-8 CODE ABS >30:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-C CODE ABS >31:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-10 CODE ABS >32:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-14 CODE ABS >36:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-16 CODE ABS >37:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-1A CODE ABS >38:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-1C CODE ABS >39:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-20 CODE ABS >40:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-24 CODE ABS >70:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-26 CODE ABS >71:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-28 CODE ABS >73:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-2A CODE ABS >74:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-2C CODE ABS >75:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-2E CODE ABS >76:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-30 CODE ABS >77:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-34 CODE ABS >80:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-36 CODE ABS >81:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-3A CODE ABS >82:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-3E CODE ABS >84:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-40 CODE ABS >86:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-42 CODE ABS >87:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-46 CODE ABS >88:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-48 CODE ABS >89:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-4C CODE ABS >90:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-50 CODE ABS >93:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-52 CODE ABS >94:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-54 CODE ABS >95:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-56 CODE ABS >96:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-58 CODE ABS >97:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-5A CODE ABS >98:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-5C CODE ABS >99:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-5E CODE ABS >100:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-60 CODE ABS >101:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-62 CODE ABS >102:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-64 CODE ABS >103:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-66 CODE ABS >106:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-68 CODE ABS >107:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-6A CODE ABS >108:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-6C CODE ABS >109:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-6E CODE ABS >110:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-70 CODE ABS >111:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-72 CODE ABS >112:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-74 CODE ABS >113:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-78 CODE ABS >114:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-7A CODE ABS >115:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-7E CODE ABS >116:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-80 CODE ABS >117:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-84 CODE ABS >118:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-86 CODE ABS >119:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-8A CODE ABS >120:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-8E CODE ABS >123:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-90 CODE ABS >124:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-94 CODE ABS >128:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-96 CODE ABS >129:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-98 CODE ABS >130:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-9A CODE ABS >131:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-9C CODE ABS >132:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-9E CODE ABS >133:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-A0 CODE ABS >138:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-A2 CODE ABS >139:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-A4 CODE ABS >140:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-A6 CODE ABS >141:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-A8 CODE ABS >142:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-AA CODE ABS >145:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-AC CODE ABS >146:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-AE CODE ABS >147:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-B0 CODE ABS >148:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-B2 CODE ABS >149:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-B4 CODE ABS >152:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-B6 CODE ABS >153:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-B8 CODE ABS >154:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-BA CODE ABS >155:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-BC CODE ABS >158:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-BE CODE ABS >159:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-C0 CODE ABS >160:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-C2 CODE ABS >161:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-C4 CODE ABS >162:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-C6 CODE ABS >163:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-C8 CODE ABS >164:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-CA CODE ABS >168:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-CC CODE ABS >169:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-CE CODE ABS >170:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-D0 CODE ABS >173:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-D2 CODE ABS >174:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-D4 CODE ABS >175:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-D6 CODE ABS >178:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-D8 CODE ABS >179:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-DA CODE ABS >180:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-DC CODE ABS >181:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-DE CODE ABS >185:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-E0 CODE ABS >186:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-E2 CODE ABS >187:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-E4 CODE ABS >188:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-E6 CODE ABS >189:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-E8 CODE ABS >192:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-EA CODE ABS >193:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-EC CODE ABS >194:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-EE CODE ABS >197:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-F0 CODE ABS >198:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-F2 CODE ABS >199:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-F4 CODE ABS >202:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-F6 CODE ABS >203:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-F8 CODE ABS >204:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-FA CODE ABS >207:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-FC CODE ABS >208:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-FE CODE ABS >209:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-100 CODE ABS >212:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-102 CODE ABS >213:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-104 CODE ABS >216:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-106 CODE ABS >217:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-108 CODE ABS >219:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-10A CODE ABS >220:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-10C CODE ABS >221:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-110 CODE ABS >222:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-112 CODE ABS >223:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-116 CODE ABS >224:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-118 CODE ABS >227:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-11A CODE ABS >228:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-11C CODE ABS >230:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-11E CODE ABS >231:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-120 CODE ABS >233:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-122 CODE ABS >234:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-124 CODE ABS >236:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-126 CODE ABS >237:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-128 CODE ABS >238:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-12C CODE ABS >239:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-12E CODE ABS >240:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-132 CODE ABS >241:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-134 CODE ABS >242:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-138 CODE ABS >243:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-13A CODE ABS >246:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-13C CODE ABS >247:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-13E CODE ABS >249:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-140 CODE ABS >250:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-142 CODE ABS >251:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-146 CODE ABS >252:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-148 CODE ABS >253:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-14C CODE ABS >254:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-14E CODE ABS >257:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
-1FFD8 resetVect CODE >16:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+8 ISRVecthighPriority CODE >59:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+A ISRVecthighPriority CODE >60:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+E ISRVecthighPriority CODE >61:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+12 ISRVecthighPriority CODE >63:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+14 ISRVecthighPriority CODE >64:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+16 ISRVecthighPriority CODE >65:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+18 ISRVectLowPriority CODE >44:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1A ISRVectLowPriority CODE >45:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1E ISRVectLowPriority CODE >47:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+20 ISRVectLowPriority CODE >48:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+24 ISRVectLowPriority CODE >50:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+26 ISRVectLowPriority CODE >51:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+28 ISRVectLowPriority CODE >53:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+2A ISRVectLowPriority CODE >54:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+2C CODE ABS >28:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+30 CODE ABS >29:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+34 CODE ABS >30:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+38 CODE ABS >31:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+3C CODE ABS >32:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+40 CODE ABS >36:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+42 CODE ABS >37:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+46 CODE ABS >38:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+48 CODE ABS >39:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+4C CODE ABS >40:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+50 CODE ABS >70:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+52 CODE ABS >71:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+54 CODE ABS >73:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+56 CODE ABS >74:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+58 CODE ABS >75:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+5A CODE ABS >76:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+5C CODE ABS >77:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+60 CODE ABS >80:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+62 CODE ABS >81:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+66 CODE ABS >82:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+6A CODE ABS >84:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+6C CODE ABS >86:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+6E CODE ABS >87:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+72 CODE ABS >88:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+74 CODE ABS >89:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+78 CODE ABS >90:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+7C CODE ABS >93:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+7E CODE ABS >94:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+80 CODE ABS >95:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+82 CODE ABS >96:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+84 CODE ABS >97:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+86 CODE ABS >98:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+88 CODE ABS >99:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+8A CODE ABS >100:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+8C CODE ABS >101:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+8E CODE ABS >102:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+90 CODE ABS >103:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+92 CODE ABS >106:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+94 CODE ABS >107:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+96 CODE ABS >108:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+98 CODE ABS >109:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+9A CODE ABS >110:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+9C CODE ABS >111:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+9E CODE ABS >112:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+A0 CODE ABS >113:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+A4 CODE ABS >114:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+A6 CODE ABS >115:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+AA CODE ABS >116:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+AC CODE ABS >117:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+B0 CODE ABS >118:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+B2 CODE ABS >119:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+B6 CODE ABS >120:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+BA CODE ABS >123:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+BC CODE ABS >124:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+C0 CODE ABS >128:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+C2 CODE ABS >129:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+C4 CODE ABS >130:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+C6 CODE ABS >131:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+C8 CODE ABS >132:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+CA CODE ABS >133:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+CC CODE ABS >138:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+CE CODE ABS >139:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+D0 CODE ABS >140:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+D2 CODE ABS >141:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+D4 CODE ABS >142:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+D6 CODE ABS >145:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+D8 CODE ABS >146:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+DA CODE ABS >147:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+DC CODE ABS >148:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+DE CODE ABS >149:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+E0 CODE ABS >152:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+E2 CODE ABS >153:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+E4 CODE ABS >154:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+E6 CODE ABS >155:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+E8 CODE ABS >158:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+EA CODE ABS >159:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+EC CODE ABS >160:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+EE CODE ABS >161:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+F0 CODE ABS >162:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+F2 CODE ABS >163:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+F4 CODE ABS >164:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+F6 CODE ABS >168:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+F8 CODE ABS >169:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+FA CODE ABS >170:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+FC CODE ABS >173:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+FE CODE ABS >174:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+100 CODE ABS >175:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+102 CODE ABS >178:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+104 CODE ABS >179:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+106 CODE ABS >180:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+108 CODE ABS >181:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+10A CODE ABS >185:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+10C CODE ABS >186:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+10E CODE ABS >187:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+110 CODE ABS >188:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+112 CODE ABS >189:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+114 CODE ABS >192:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+116 CODE ABS >193:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+118 CODE ABS >194:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+11A CODE ABS >197:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+11C CODE ABS >198:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+11E CODE ABS >199:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+120 CODE ABS >202:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+122 CODE ABS >203:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+124 CODE ABS >204:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+126 CODE ABS >207:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+128 CODE ABS >208:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+12A CODE ABS >209:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+12C CODE ABS >212:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+12E CODE ABS >213:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+130 CODE ABS >216:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+132 CODE ABS >217:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+134 CODE ABS >219:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+136 CODE ABS >220:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+138 CODE ABS >221:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+13C CODE ABS >222:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+13E CODE ABS >223:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+142 CODE ABS >224:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+144 CODE ABS >227:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+146 CODE ABS >228:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+148 CODE ABS >230:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+14A CODE ABS >231:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+14C CODE ABS >233:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+14E CODE ABS >234:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+150 CODE ABS >236:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+152 CODE ABS >237:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+154 CODE ABS >238:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+158 CODE ABS >239:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+15A CODE ABS >240:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+15E CODE ABS >241:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+160 CODE ABS >242:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+164 CODE ABS >243:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+166 CODE ABS >246:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+168 CODE ABS >247:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+16A CODE ABS >249:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+16C CODE ABS >250:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+16E CODE ABS >251:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+172 CODE ABS >252:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+174 CODE ABS >253:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+178 CODE ABS >254:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+17A CODE ABS >257:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+17C CODE ABS >259:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+17E CODE ABS >260:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+180 CODE ABS >262:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+182 CODE ABS >263:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+184 CODE ABS >264:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+186 CODE ABS >265:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+188 CODE ABS >266:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+18C CODE ABS >268:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+18E CODE ABS >269:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+190 CODE ABS >270:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+192 CODE ABS >271:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+194 CODE ABS >272:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+196 CODE ABS >273:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+198 CODE ABS >274:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+19A CODE ABS >275:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+19C CODE ABS >276:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+19E CODE ABS >277:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1A0 CODE ABS >278:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1A2 CODE ABS >280:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1A4 CODE ABS >281:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1A6 CODE ABS >282:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1A8 CODE ABS >283:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1AA CODE ABS >284:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1AC CODE ABS >285:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1AE CODE ABS >286:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1B0 CODE ABS >287:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1B4 CODE ABS >288:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1B6 CODE ABS >289:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1BA CODE ABS >290:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1BC CODE ABS >291:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1C0 CODE ABS >292:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1C2 CODE ABS >293:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1C6 CODE ABS >294:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1CA CODE ABS >297:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1CC CODE ABS >298:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+1D0 CODE ABS >300:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
+0 resetVect CODE >16:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proyectos\uC1_2022_Laboriano_Jose\P2-PARCIAL2.X\P2-PARCIAL2.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -271,139 +311,139 @@ FE CODE ABS >209:C:\Users\Cristian\Desktop\UNP\Ciclo 4\Microcontroladores 1\proy
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-__Hspace_0 20000 0 ABS 0 - -
+__Hspace_0 1D2 0 ABS 0 - -
 __Hspace_1 506 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 600023 0 ABS 0 - -
-__Hudata_bank5 150 0 ABS 0 udata_bank5 -
-__Hudata_bank6 150 0 ABS 0 udata_bank6 -
-__Hudata_bank7 150 0 ABS 0 udata_bank7 -
-__Hudata_bank8 150 0 ABS 0 udata_bank8 -
-__Hudata_bank9 150 0 ABS 0 udata_bank9 -
-__HISRVecthighPriority 0 0 ABS 0 ISRVecthighPriority -
-__HISRVectLowPriority 0 0 ABS 0 ISRVectLowPriority -
-__LISRVecthighPriority 0 0 ABS 0 ISRVecthighPriority -
-__Hudata_bank10 150 0 ABS 0 udata_bank10 -
-__Hudata_bank11 150 0 ABS 0 udata_bank11 -
-__Hudata_bank12 150 0 ABS 0 udata_bank12 -
-__Hudata_bank13 150 0 ABS 0 udata_bank13 -
-__Hudata_bank14 150 0 ABS 0 udata_bank14 -
-__Hudata_bank15 150 0 ABS 0 udata_bank15 -
-__Hudata_bank16 150 0 ABS 0 udata_bank16 -
-__Hudata_bank17 150 0 ABS 0 udata_bank17 -
-__Hudata_bank18 150 0 ABS 0 udata_bank18 -
-__Hudata_bank19 150 0 ABS 0 udata_bank19 -
-__Hudata_bank20 150 0 ABS 0 udata_bank20 -
-__Hudata_bank21 150 0 ABS 0 udata_bank21 -
-__Hudata_bank22 150 0 ABS 0 udata_bank22 -
-__Hudata_bank23 150 0 ABS 0 udata_bank23 -
-__Hudata_bank24 150 0 ABS 0 udata_bank24 -
-__Hudata_bank25 150 0 ABS 0 udata_bank25 -
-__Hudata_bank26 150 0 ABS 0 udata_bank26 -
-__Hudata_bank27 150 0 ABS 0 udata_bank27 -
-__Hudata_bank28 150 0 ABS 0 udata_bank28 -
-__Hudata_bank29 150 0 ABS 0 udata_bank29 -
-__Hudata_bank30 150 0 ABS 0 udata_bank30 -
-__Hudata_bank31 150 0 ABS 0 udata_bank31 -
-__Hudata_bank32 150 0 ABS 0 udata_bank32 -
-__Hudata_bank33 150 0 ABS 0 udata_bank33 -
-__Hudata_bank34 150 0 ABS 0 udata_bank34 -
-__Hudata_bank35 150 0 ABS 0 udata_bank35 -
-__Hudata_bank36 150 0 ABS 0 udata_bank36 -
-__Hudata_bank37 150 0 ABS 0 udata_bank37 -
-__Hudata_bank38 150 0 ABS 0 udata_bank38 -
-__Hudata_bank39 150 0 ABS 0 udata_bank39 -
-__Hudata_bank40 150 0 ABS 0 udata_bank40 -
-__Hudata_bank41 150 0 ABS 0 udata_bank41 -
-__Hudata_bank42 150 0 ABS 0 udata_bank42 -
-__Hudata_bank43 150 0 ABS 0 udata_bank43 -
-__Hudata_bank44 150 0 ABS 0 udata_bank44 -
-__Hudata_bank45 150 0 ABS 0 udata_bank45 -
-__Hudata_bank46 150 0 ABS 0 udata_bank46 -
-__Hudata_bank47 150 0 ABS 0 udata_bank47 -
-__Hudata_bank48 150 0 ABS 0 udata_bank48 -
-__Hudata_bank49 150 0 ABS 0 udata_bank49 -
-__Hudata_bank50 150 0 ABS 0 udata_bank50 -
-__Hudata_bank51 150 0 ABS 0 udata_bank51 -
-__Hudata_bank52 150 0 ABS 0 udata_bank52 -
-__Hudata_bank53 150 0 ABS 0 udata_bank53 -
-__Hudata_bank54 150 0 ABS 0 udata_bank54 -
+__Hudata_bank5 1D2 0 ABS 0 udata_bank5 -
+__Hudata_bank6 1D2 0 ABS 0 udata_bank6 -
+__Hudata_bank7 1D2 0 ABS 0 udata_bank7 -
+__Hudata_bank8 1D2 0 ABS 0 udata_bank8 -
+__Hudata_bank9 1D2 0 ABS 0 udata_bank9 -
+__HISRVecthighPriority 18 0 CODE 0 ISRVecthighPriority -
+__HISRVectLowPriority 2C 0 CODE 0 ISRVectLowPriority -
+__LISRVecthighPriority 8 0 CODE 0 ISRVecthighPriority -
+__Hudata_bank10 1D2 0 ABS 0 udata_bank10 -
+__Hudata_bank11 1D2 0 ABS 0 udata_bank11 -
+__Hudata_bank12 1D2 0 ABS 0 udata_bank12 -
+__Hudata_bank13 1D2 0 ABS 0 udata_bank13 -
+__Hudata_bank14 1D2 0 ABS 0 udata_bank14 -
+__Hudata_bank15 1D2 0 ABS 0 udata_bank15 -
+__Hudata_bank16 1D2 0 ABS 0 udata_bank16 -
+__Hudata_bank17 1D2 0 ABS 0 udata_bank17 -
+__Hudata_bank18 1D2 0 ABS 0 udata_bank18 -
+__Hudata_bank19 1D2 0 ABS 0 udata_bank19 -
+__Hudata_bank20 1D2 0 ABS 0 udata_bank20 -
+__Hudata_bank21 1D2 0 ABS 0 udata_bank21 -
+__Hudata_bank22 1D2 0 ABS 0 udata_bank22 -
+__Hudata_bank23 1D2 0 ABS 0 udata_bank23 -
+__Hudata_bank24 1D2 0 ABS 0 udata_bank24 -
+__Hudata_bank25 1D2 0 ABS 0 udata_bank25 -
+__Hudata_bank26 1D2 0 ABS 0 udata_bank26 -
+__Hudata_bank27 1D2 0 ABS 0 udata_bank27 -
+__Hudata_bank28 1D2 0 ABS 0 udata_bank28 -
+__Hudata_bank29 1D2 0 ABS 0 udata_bank29 -
+__Hudata_bank30 1D2 0 ABS 0 udata_bank30 -
+__Hudata_bank31 1D2 0 ABS 0 udata_bank31 -
+__Hudata_bank32 1D2 0 ABS 0 udata_bank32 -
+__Hudata_bank33 1D2 0 ABS 0 udata_bank33 -
+__Hudata_bank34 1D2 0 ABS 0 udata_bank34 -
+__Hudata_bank35 1D2 0 ABS 0 udata_bank35 -
+__Hudata_bank36 1D2 0 ABS 0 udata_bank36 -
+__Hudata_bank37 1D2 0 ABS 0 udata_bank37 -
+__Hudata_bank38 1D2 0 ABS 0 udata_bank38 -
+__Hudata_bank39 1D2 0 ABS 0 udata_bank39 -
+__Hudata_bank40 1D2 0 ABS 0 udata_bank40 -
+__Hudata_bank41 1D2 0 ABS 0 udata_bank41 -
+__Hudata_bank42 1D2 0 ABS 0 udata_bank42 -
+__Hudata_bank43 1D2 0 ABS 0 udata_bank43 -
+__Hudata_bank44 1D2 0 ABS 0 udata_bank44 -
+__Hudata_bank45 1D2 0 ABS 0 udata_bank45 -
+__Hudata_bank46 1D2 0 ABS 0 udata_bank46 -
+__Hudata_bank47 1D2 0 ABS 0 udata_bank47 -
+__Hudata_bank48 1D2 0 ABS 0 udata_bank48 -
+__Hudata_bank49 1D2 0 ABS 0 udata_bank49 -
+__Hudata_bank50 1D2 0 ABS 0 udata_bank50 -
+__Hudata_bank51 1D2 0 ABS 0 udata_bank51 -
+__Hudata_bank52 1D2 0 ABS 0 udata_bank52 -
+__Hudata_bank53 1D2 0 ABS 0 udata_bank53 -
+__Hudata_bank54 1D2 0 ABS 0 udata_bank54 -
 isa$xinst 0 0 ABS 0 - build/default/production/P2-PARCIAL2.o
-__Hedata 150 0 ABS 0 edata -
-__Hudata 150 0 ABS 0 udata -
+__Hedata 1D2 0 ABS 0 edata -
+__Hudata 1D2 0 ABS 0 udata -
 __Hconfig 300023 0 CONFIG 4 config -
-__Ledata 150 0 ABS 0 edata -
-__Ludata 150 0 ABS 0 udata -
-__HCODE 150 0 ABS 0 CODE -
-__Hcode 150 0 ABS 0 code -
-__Hdata 150 0 ABS 0 data -
-__LCODE 0 0 ABS 0 CODE -
-__Lcode 150 0 ABS 0 code -
-__Ldata 150 0 ABS 0 data -
-__S0 20000 0 ABS 0 - -
+__Ledata 1D2 0 ABS 0 edata -
+__Ludata 1D2 0 ABS 0 udata -
+__HCODE 1D2 0 ABS 0 CODE -
+__Hcode 1D2 0 ABS 0 code -
+__Hdata 1D2 0 ABS 0 data -
+__LCODE 2C 0 ABS 0 CODE -
+__Lcode 1D2 0 ABS 0 code -
+__Ldata 1D2 0 ABS 0 data -
+__S0 0 0 ABS 0 - -
 __S1 506 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-__Ludata_bank10 150 0 ABS 0 udata_bank10 -
-__Ludata_bank11 150 0 ABS 0 udata_bank11 -
-__Ludata_bank12 150 0 ABS 0 udata_bank12 -
-__Ludata_bank13 150 0 ABS 0 udata_bank13 -
-__Ludata_bank14 150 0 ABS 0 udata_bank14 -
-__Ludata_bank15 150 0 ABS 0 udata_bank15 -
-__Ludata_bank16 150 0 ABS 0 udata_bank16 -
-__Ludata_bank17 150 0 ABS 0 udata_bank17 -
-__Ludata_bank18 150 0 ABS 0 udata_bank18 -
-__Ludata_bank19 150 0 ABS 0 udata_bank19 -
-__Ludata_bank20 150 0 ABS 0 udata_bank20 -
-__Ludata_bank21 150 0 ABS 0 udata_bank21 -
-__Ludata_bank22 150 0 ABS 0 udata_bank22 -
-__Ludata_bank23 150 0 ABS 0 udata_bank23 -
-__Ludata_bank24 150 0 ABS 0 udata_bank24 -
-__Ludata_bank25 150 0 ABS 0 udata_bank25 -
-__Ludata_bank26 150 0 ABS 0 udata_bank26 -
-__Ludata_bank27 150 0 ABS 0 udata_bank27 -
-__Ludata_bank28 150 0 ABS 0 udata_bank28 -
-__Ludata_bank29 150 0 ABS 0 udata_bank29 -
-__Ludata_bank30 150 0 ABS 0 udata_bank30 -
-__Ludata_bank31 150 0 ABS 0 udata_bank31 -
-__Ludata_bank32 150 0 ABS 0 udata_bank32 -
-__Ludata_bank33 150 0 ABS 0 udata_bank33 -
-__Ludata_bank34 150 0 ABS 0 udata_bank34 -
-__Ludata_bank35 150 0 ABS 0 udata_bank35 -
-__Ludata_bank36 150 0 ABS 0 udata_bank36 -
-__Ludata_bank37 150 0 ABS 0 udata_bank37 -
-__Ludata_bank38 150 0 ABS 0 udata_bank38 -
-__Ludata_bank39 150 0 ABS 0 udata_bank39 -
-__Ludata_bank40 150 0 ABS 0 udata_bank40 -
-__Ludata_bank41 150 0 ABS 0 udata_bank41 -
-__Ludata_bank42 150 0 ABS 0 udata_bank42 -
-__Ludata_bank43 150 0 ABS 0 udata_bank43 -
-__Ludata_bank44 150 0 ABS 0 udata_bank44 -
-__Ludata_bank45 150 0 ABS 0 udata_bank45 -
-__Ludata_bank46 150 0 ABS 0 udata_bank46 -
-__Ludata_bank47 150 0 ABS 0 udata_bank47 -
-__Ludata_bank48 150 0 ABS 0 udata_bank48 -
-__Ludata_bank49 150 0 ABS 0 udata_bank49 -
-__Ludata_bank50 150 0 ABS 0 udata_bank50 -
-__Ludata_bank51 150 0 ABS 0 udata_bank51 -
-__Ludata_bank52 150 0 ABS 0 udata_bank52 -
-__Ludata_bank53 150 0 ABS 0 udata_bank53 -
-__Ludata_bank54 150 0 ABS 0 udata_bank54 -
+__Ludata_bank10 1D2 0 ABS 0 udata_bank10 -
+__Ludata_bank11 1D2 0 ABS 0 udata_bank11 -
+__Ludata_bank12 1D2 0 ABS 0 udata_bank12 -
+__Ludata_bank13 1D2 0 ABS 0 udata_bank13 -
+__Ludata_bank14 1D2 0 ABS 0 udata_bank14 -
+__Ludata_bank15 1D2 0 ABS 0 udata_bank15 -
+__Ludata_bank16 1D2 0 ABS 0 udata_bank16 -
+__Ludata_bank17 1D2 0 ABS 0 udata_bank17 -
+__Ludata_bank18 1D2 0 ABS 0 udata_bank18 -
+__Ludata_bank19 1D2 0 ABS 0 udata_bank19 -
+__Ludata_bank20 1D2 0 ABS 0 udata_bank20 -
+__Ludata_bank21 1D2 0 ABS 0 udata_bank21 -
+__Ludata_bank22 1D2 0 ABS 0 udata_bank22 -
+__Ludata_bank23 1D2 0 ABS 0 udata_bank23 -
+__Ludata_bank24 1D2 0 ABS 0 udata_bank24 -
+__Ludata_bank25 1D2 0 ABS 0 udata_bank25 -
+__Ludata_bank26 1D2 0 ABS 0 udata_bank26 -
+__Ludata_bank27 1D2 0 ABS 0 udata_bank27 -
+__Ludata_bank28 1D2 0 ABS 0 udata_bank28 -
+__Ludata_bank29 1D2 0 ABS 0 udata_bank29 -
+__Ludata_bank30 1D2 0 ABS 0 udata_bank30 -
+__Ludata_bank31 1D2 0 ABS 0 udata_bank31 -
+__Ludata_bank32 1D2 0 ABS 0 udata_bank32 -
+__Ludata_bank33 1D2 0 ABS 0 udata_bank33 -
+__Ludata_bank34 1D2 0 ABS 0 udata_bank34 -
+__Ludata_bank35 1D2 0 ABS 0 udata_bank35 -
+__Ludata_bank36 1D2 0 ABS 0 udata_bank36 -
+__Ludata_bank37 1D2 0 ABS 0 udata_bank37 -
+__Ludata_bank38 1D2 0 ABS 0 udata_bank38 -
+__Ludata_bank39 1D2 0 ABS 0 udata_bank39 -
+__Ludata_bank40 1D2 0 ABS 0 udata_bank40 -
+__Ludata_bank41 1D2 0 ABS 0 udata_bank41 -
+__Ludata_bank42 1D2 0 ABS 0 udata_bank42 -
+__Ludata_bank43 1D2 0 ABS 0 udata_bank43 -
+__Ludata_bank44 1D2 0 ABS 0 udata_bank44 -
+__Ludata_bank45 1D2 0 ABS 0 udata_bank45 -
+__Ludata_bank46 1D2 0 ABS 0 udata_bank46 -
+__Ludata_bank47 1D2 0 ABS 0 udata_bank47 -
+__Ludata_bank48 1D2 0 ABS 0 udata_bank48 -
+__Ludata_bank49 1D2 0 ABS 0 udata_bank49 -
+__Ludata_bank50 1D2 0 ABS 0 udata_bank50 -
+__Ludata_bank51 1D2 0 ABS 0 udata_bank51 -
+__Ludata_bank52 1D2 0 ABS 0 udata_bank52 -
+__Ludata_bank53 1D2 0 ABS 0 udata_bank53 -
+__Ludata_bank54 1D2 0 ABS 0 udata_bank54 -
 __Lconfig 0 0 CONFIG 4 config -
 isa$std 1 0 ABS 0 - build/default/production/P2-PARCIAL2.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__HresetVect 150 0 ABS 0 resetVect -
-__Ludata_bank5 150 0 ABS 0 udata_bank5 -
-__Ludata_bank6 150 0 ABS 0 udata_bank6 -
-__Ludata_bank7 150 0 ABS 0 udata_bank7 -
-__Ludata_bank8 150 0 ABS 0 udata_bank8 -
-__Ludata_bank9 150 0 ABS 0 udata_bank9 -
-__LresetVect 150 0 ABS 0 resetVect -
-__LISRVectLowPriority 0 0 ABS 0 ISRVectLowPriority -
-__Hudata_acs 150 0 ABS 0 udata_acs -
-__Ludata_acs 150 0 ABS 0 udata_acs -
+__HresetVect 4 0 CODE 0 resetVect -
+__Ludata_bank5 1D2 0 ABS 0 udata_bank5 -
+__Ludata_bank6 1D2 0 ABS 0 udata_bank6 -
+__Ludata_bank7 1D2 0 ABS 0 udata_bank7 -
+__Ludata_bank8 1D2 0 ABS 0 udata_bank8 -
+__Ludata_bank9 1D2 0 ABS 0 udata_bank9 -
+__LresetVect 0 0 CODE 0 resetVect -
+__LISRVectLowPriority 18 0 CODE 0 ISRVectLowPriority -
+__Hudata_acs 1D2 0 ABS 0 udata_acs -
+__Ludata_acs 1D2 0 ABS 0 udata_acs -
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -428,10 +468,10 @@ __Ludata_acs 150 0 ABS 0 udata_acs -
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-ISRVectLowPriority 0 1FFEC 1FFEC 14 1
-resetVect 0 1FFD8 1FFD8 4 1
+ISRVectLowPriority 0 18 18 14 1
+resetVect 0 0 0 4 1
 udata_acs 1 500 500 6 1
-ISRVecthighPriority 0 1FFDC 1FFDC 10 1
+ISRVecthighPriority 0 8 8 10 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal
